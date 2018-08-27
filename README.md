@@ -1,50 +1,57 @@
-# Scrabble Score Checker
+# Non-Profit: Water Crisis Coordination
 
-#### A program that allows users to input a word and determine its raw Scrabble score, assuming no special tiles. 6/1/17
+#### A website coordinating volunteers and recipients in order to help the water crisis. 
 
-#### By **Marilyn Carlin and David Wilson**
+#### By **Ahmed Kohar, Akjol Jaenbai, Chan Lee, Steve Santos, Vera Weikel**
 
 ## Description
 
-A website created with C# and HTML where a user can submit a word and determine its raw Scrabble score.
+A website created to coordinate volunteers with recipients in need.
 
 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
 | **Homepage** | User accesses localhost:5004 | Homepage with user input form |
-| **Program Gathers User Input** | User input: "pants" | Output: "pants" |
-| **Program Removes Spaces from User Input**| User Input: "pants pants" | Output: "pantspants" |
-| **Program Removes Punctuation from User Input**| Input: "p#an^t@s  /p(ant%s" | Output: "pantspants" |
+| **Program will be available to ~~Africa~~ Volunteers/Recipients in your local area.** | User input: "Seattle" | Output: "Seattle" |
+| **Program allocates a website visitor as "Volunteer" or "Recipient" based on their User Input**| User Input: "
+- [x] Volunteer
+- [ ] Recipient" |
+| **Program requests User information**| Input: "Jane Doe" | Output: "Jane Doe" |
 | **Program Assigns Characters Numeric Values** | Input: "pants" | Output: "3 1 1 1 1" |
-| **Program Sums Character Values**| Input: "3 1 1 1 1" | Page Displays: 7 |
+| **Program offers available cities from a dropdown.**| Input: "City" | Page Displays: "City Name" |
 
 ## Setup/Installation Requirements
 
-1. To run this program, you must have a C# compiler. I use [Mono](http://www.mono-project.com).
-2. Install the [Nancy](http://nancyfx.org/) framework to use the view engine. Follow the link for installation instructions.
-3. Clone this repository.
-4. Open the command line--I use PowerShell--and navigate into the repository. Use the command "dnx kestrel" to start the server.
-5. On your browser, navigate to "localhost:5004" and enjoy!
+11. To run this program, you must have Bootstrap. I use [Bootstrap](https://getbootstrap.com/docs/3.3/).Follow the link for installation instructions. Choose version 3.3.7.
+2. Install the [jQuery](https://jquery.com/download/) framework to use the view engine. Follow the link for installation instructions.Choose version 3.3.1.
+3. Clone this repository: https://github.com/QuietEvolver/weikel-week3prj-submission
+4. Open the command line--and navigate into the repository.
+5. On your browser, open the index.html and enjoy!
 
 ## Known Bugs
 * No known bugs at this time.
 
 ## Technologies Used
-* C#
-  * Nancy framework
-  * Razor View Engine
-  * ASP.NET Kestrel HTTP server
-  * xUnit
-
+* JavaScript
+* jQuery
+* Bootstrap
+* Atom
+* GitHub
 * HTML
 
 ## Support and contact details
 
-_Email no one with any questions, comments, or concerns._
+_Ahmed Kohar: amkhokar@gmail.com
+Akjol Jaenbai: akjolilgiz@gmail.com
+Chan Lee: akjolilgiz@gmail.com
+Steve Santos: steve.santos1508@gmail.com
+Vera Weikel: vera.weikel@gmail.com
+
+Please contact with questions and/or comments._
 
 ### License
 
 *{This software is licensed under the MIT license}*
 
-Copyright (c) 2017 **_{Marilyn Carlin, David Wilson}_**
+Copyright (c) 2018 **_{Ahmed Kohar, Akjol Jaenbai, Chan Lee, Steve Santos, Vera Weikel}_**
