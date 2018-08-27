@@ -17,7 +17,7 @@ A website created to coordinate volunteers with recipients in need.
 | **Program allocates a website visitor as "Volunteer" or "Recipient" based on their User Input**| User Input: | Output: |
 | ------------- | ------------- | ------------- | .  | .  |
 |  .  |"- [x] Volunteer  | "Volunteer Information Request Form" |
-| - [ ] Recipient" | .  |
+|  .  |- [ ] Recipient" | .  |
 | **Program requests User information**| Input: "Jane Doe" | Output: "Jane Doe" |
 | **Program Assigns Recipiens with Volunteers in their city of choice** | Input: "city choice" | Output: "available volunteer names" |
 
