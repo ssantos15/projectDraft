@@ -1,0 +1,901 @@
+#intro h2{
+  border: 1px white solid;
+  padding:1%;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 17%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.intro h1 {
+  font-size: 750%;
+}
+
+body {
+  background-color: gray;
+  color:white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+/*
+Skip to content
+
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @QuietEvolver Sign out
+0
+0 0 hyewon92cho/portfolio-website
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+portfolio-website/css/styles.css
+e808e4e  22 days ago
+@hyewon92cho hyewon92cho It will let top menu items use float-left instead of flex-row
+
+828 lines (636 sloc)  12.4 KB
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@media screen and (max-width: 499px) {
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .text-small {
+        font-size: 1.2rem;
+    }
+
+    .list-inline-flush {
+        border-top: 1px solid rgba(0,0,0,.125);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        border-left: 1px solid rgba(0,0,0,.125);
+        border-right: 1px solid rgba(0,0,0,.125);
+        border-radius: 4px;
+        width: 100%;
+        padding: .75rem 1.25rem;
+    }
+
+    .list-inline-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        word-wrap: break-word;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #cfcfcf!important;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .bg-light {
+        background-color: #f8f9fa;
+    }
+
+    .text-secondary {
+        color: #6c757d;
+    }
+
+    .text-info {
+        color: #17a2b8;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .justify-content-around {
+        justify-content: space-around;
+    }
+
+    .justify-content-between {
+        justify-content: space-between;
+    }
+
+    .justify-content-start {
+        justify-content: flex-start;
+    }
+
+    .justify-content-end {
+        justify-content: flex-end;
+
+    }
+
+    .align-items-center {
+        align-items: center;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .mb-5 {
+        margin-bottom: 3rem;
+    }
+
+    .mx-4 {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .my-2 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .p-2 {
+        padding: 0.5rem;
+    }
+
+    .pt-5 {
+        padding-top: 3rem;
+    }
+
+    .px-4 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .font-weight-bold {
+        font-weight: bold;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    #menu {
+        width: 160px;
+    }
+
+    #container {
+        width: 100vw;
+    }
+
+    .inner-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #firstPage {
+        height: 100vh;
+    }
+
+    #profileImage {
+        width: 25vh;
+        min-width: 150px;
+    }
+
+    #secondPage {
+        padding-top: 100px;
+    }
+
+    .period {
+        display: block;
+    }
+
+    #skillsHorizontal {
+        display: none;
+    }
+
+    #skillsVertical {
+        width: 100%;
+        text-align: center;
+    }
+
+    #thirdPage {
+        padding-top: 120px;
+    }
+
+    .projectBox {
+        width: 50vw;
+    }
+
+    .projectImage {
+        width: 75%;
+    }
+
+    #fourthPage {
+        height: 100vh;
+    }
+
+    #contactBox {
+
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 780px) {
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .text-small {
+        font-size: 1.2rem;
+    }
+
+    .list-inline-flush {
+        border-top: 1px solid rgba(0,0,0,.125);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        border-left: 1px solid rgba(0,0,0,.125);
+        border-right: 1px solid rgba(0,0,0,.125);
+        border-radius: 4px;
+        width: 100%;
+        padding: .75rem 1.25rem;
+    }
+
+    .list-inline-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #cfcfcf!important;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .bg-light {
+        background-color: #f8f9fa;
+    }
+
+    .text-secondary {
+        color: #6c757d;
+    }
+
+    .text-info {
+        color: #17a2b8;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .justify-content-around {
+        justify-content: space-around;
+    }
+
+    .justify-content-between {
+        justify-content: space-between;
+    }
+
+    .justify-content-start {
+        justify-content: flex-start;
+    }
+
+    .justify-content-end {
+        justify-content: flex-end;
+
+    }
+
+    .align-items-center {
+        align-items: center;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .mb-5 {
+        margin-bottom: 3rem;
+    }
+
+    .mx-4 {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .my-2 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .p-2 {
+        padding: 0.5rem;
+    }
+
+    .px-4 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .pt-5 {
+        padding-top: 3rem;
+    }
+
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .font-weight-bold {
+        font-weight: bold;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    #menu {
+        width: 160px;
+    }
+
+    #container {
+        width: 100vw;
+    }
+
+    .inner-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #firstPage {
+        height: 100vh;
+    }
+
+    #profileImage {
+        width: 25vh;
+        min-width: 150px;
+    }
+
+    #secondPage {
+        padding-top: 100px;
+    }
+
+    .period {
+        display: block;
+    }
+
+    #thirdPage {
+        padding-top: 120px;
+    }
+
+    #skillsHorizontal {
+
+    }
+
+    #skillsVertical {
+        display: none;
+    }
+
+
+    .projectBox {
+        width: 50vw;
+    }
+
+    .projectImage {
+        width: 75%;
+    }
+
+    #fourthPage {
+        height: 100vh;
+    }
+
+    #contactBox {
+        width: 35vw;
+        min-width: 450px;
+    }
+}
+
+@media screen and (min-width: 781px) and (max-width: 1024px) {
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .text-small {
+        font-size: 1.2rem;
+    }
+
+    .list-inline-flush {
+        border-top: 1px solid rgba(0,0,0,.125);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        border-left: 1px solid rgba(0,0,0,.125);
+        border-right: 1px solid rgba(0,0,0,.125);
+        border-radius: 4px;
+        width: 100%;
+        padding: .75rem 1.25rem;
+    }
+
+    .list-inline-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #cfcfcf!important;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .bg-light {
+        background-color: #f8f9fa;
+    }
+
+    .text-secondary {
+        color: #6c757d;
+    }
+
+    .text-info {
+        color: #17a2b8;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .justify-content-around {
+        justify-content: space-around;
+    }
+
+    .justify-content-between {
+        justify-content: space-between;
+    }
+
+    .justify-content-start {
+        justify-content: flex-start;
+    }
+
+    .justify-content-end {
+        justify-content: flex-end;
+
+    }
+
+    .align-items-center {
+        align-items: center;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .mb-5 {
+        margin-bottom: 3rem;
+    }
+
+    .mx-4 {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .my-2 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .p-2 {
+        padding: 0.5rem;
+    }
+
+    .pt-5 {
+        padding-top: 3rem;
+    }
+
+    .px-4 {
+        padding-left: 1.5rem;
+        padding-right: l.5rem;
+    }
+
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .font-weight-bold {
+        font-weight: bold;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    #menu {
+        width: 160px;
+    }
+
+    #container {
+        width: 100vw;
+    }
+
+    .inner-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #firstPage {
+        height: 100vh;
+    }
+
+    #profileImage {
+        width: 25vh;
+        min-width: 150px;
+    }
+
+    #secondPage {
+        padding-top: 100px;
+    }
+
+    #thirdPage {
+        padding-top: 120px;
+    }
+
+    #skillsHorizontal {
+
+    }
+
+    #skillsVertical {
+        display: none;
+    }
+
+    .projectBox {
+        width: 50vw;
+    }
+
+    .projectImage {
+        width: 75%;
+    }
+
+    #fourthPage {
+        height: 100vh;
+    }
+
+    #contactBox {
+        width: 35vw;
+        min-width: 450px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .text-small {
+        font-size: 1.2rem;
+    }
+
+    .list-inline-flush {
+        border-top: 1px solid rgba(0,0,0,.125);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        border-left: 1px solid rgba(0,0,0,.125);
+        border-right: 1px solid rgba(0,0,0,.125);
+        border-radius: 4px;
+        width: 100%;
+        padding: .75rem 1.25rem;
+    }
+
+    .list-inline-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #cfcfcf!important;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .bg-light {
+        background-color: #f8f9fa;
+    }
+
+    .text-secondary {
+        color: #6c757d;
+    }
+
+    .text-info {
+        color: #17a2b8;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .justify-content-center {
+        justify-content: center;
+    }
+
+    .justify-content-around {
+        justify-content: space-around;
+    }
+
+    .justify-content-between {
+        justify-content: space-between;
+    }
+
+    .justify-content-start {
+        justify-content: flex-start;
+    }
+
+    .justify-content-end {
+        justify-content: flex-end;
+
+    }
+
+    .align-items-center {
+        align-items: center;
+    }
+
+    .mt-2 {
+        margin-top: 0.5rem;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .mb-5 {
+        margin-bottom: 3rem;
+    }
+
+    .mx-4 {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .my-2 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .p-2 {
+        padding: 0.5rem;
+    }
+
+    .pt-5 {
+        padding-top: 3rem;
+    }
+
+    .px-4 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .font-weight-bold {
+        font-weight: bold;
+    }
+
+    .float-left {
+        float: left;
+    }
+
+    .float-right {
+        float: right;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    #menu {
+        width: 160px;
+    }
+
+    #container {
+        width: 100vw;
+    }
+
+    #container #top div:first-child h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .inner-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #firstPage {
+        height: 100vh;
+    }
+
+    #profileImage {
+        width: 25vh;
+        min-width: 150px;
+    }
+
+    #secondPage {
+        padding-top: 100px;
+    }
+
+    #thirdPage {
+        padding-top: 120px;
+    }
+
+    #skillsHorizontal {
+
+    }
+
+    #skillsVertical {
+        display: none;
+    }
+
+
+    .projectBox {
+        width: 50vw;
+        max-width: 700px;
+    }
+
+    .projectImage {
+        width: 75%;
+        height: 75%;
+    }
+
+    #fourthPage {
+        height: 100vh;
+    }
+
+    #contactBox {
+        width: 35vw;
+        max-width: 400px;
+        padding-top: 10px;
+    }
+}
+
+*/
